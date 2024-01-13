@@ -10,8 +10,8 @@ import './App.css'
 
 // import pages
 import AuthPage from './AuthPage';
-import NewOrderPage from './NewOrderPage';
-import OrderHistoryPage from './OrderHistoryPage';
+import NewResourcePage from './NewResourcePage/NewResourcePage';
+import ResourceHistoryPage from './ResourceHistoryPage/ResourceHistoryPage';
 
 // import components
 import NavBar from '../components/NavBar';
@@ -31,8 +31,8 @@ function App() {
           <>
             <NavBar user={user} setUser={setUser}/>
             < Routes >
-              <Route path='/orders/new' element={<NewOrderPage />}/>
-              <Route path='/orders' element={<OrderHistoryPage />}/>
+              <Route path='/orders/new' element={<NewResourcePage />}/>
+              <Route path='/orders' element={<ResourceHistoryPage />}/>
             </Routes>
           </>
           :

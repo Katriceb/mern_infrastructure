@@ -13,11 +13,11 @@ function NavBar(props) {
 
   return (
     <nav>
-        <Link to='/orders'>Order History</Link>
+        <Link to='/orders'>Resource History</Link>
         &nbsp; | &nbsp;
-        <Link to='/orders/new'>New Orders</Link>
+        <Link to='/orders/new'>New Resource</Link>
         &nbsp; | &nbsp;
-        <span>Welcome, {props.user.name}</span>
+        <span>Welcome Safen Haven's, {props.user.name}</span>
         &nbsp; | &nbsp;
         <Link to="" onClick={handleLogOut}>Log Out</Link>
     </nav>
