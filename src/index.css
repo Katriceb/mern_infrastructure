@@ -47,7 +47,7 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: #64ffd8;
 }
 button:focus,
 button:focus-visible {
@@ -60,7 +60,7 @@ button:focus-visible {
     background-color: #ffffff;
   }
   a:hover {
-    color: #747bff;
+    color: #ffb074;
   }
   button {
     background-color: #f9f9f9;
@@ -69,11 +69,11 @@ button:focus-visible {
 /* CSS Custom Properties */
 :root {
   --white: #FFFFFF;
-  --tan-1: #FBF9F6;
+  --yellow-1: --yellow-1#FBF9F6;
   --tan-2: #E7E2DD;
-  --tan-3: #E2D9D1;
+  --brown-3:rgb(43, 27, 13)8;
   --tan-4: #D3C1AE;
-  --orange: #F67F00;
+  --red: red;
   --text-light: #968c84;
   --text-dark: #615954;
 }

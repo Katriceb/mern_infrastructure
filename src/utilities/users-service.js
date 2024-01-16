@@ -10,7 +10,7 @@ export async function signUp(userData) {
     const token = await usersAPI.signUp(userData);
     // Baby step by returning whatever is sent back by the server
     // once we generate the token, we can persist
-    localStorage.setResource('token', token);
+    localStorage.setItem('token', token);
     // return token;
     return getUser();
 }
@@ -19,25 +19,26 @@ export async function login(credentials) {
     const token = await usersAPI.login(credentials);
 
     // Persist the token
-    localStorage.setResource('token', token);
+    localStorage.setItem('token', token);
 
     return getUser();
 }
 
 export function getToken() {
     // getItem returns null if there is no string
-    const token = localStorage.getResource('token');
+    const token = localStorage.getItem('token');
     if (!token) return null;
     // Obtain payload of the token 
     const payload = JSON.parse(atob(token.split('.')[1]));
     // A JWT's expiration is expressed in seconds not milliseconds, so convert
     if (payload.exp < Date.now() / 1000) {
         // Token has expired and remove from local storage
-        localStorage.removeResource('token');
+        localStorage.removeItem('token');
         return null;
     }
     return token;
 }
+
 
 export function getUser() {
     const token = getToken();
@@ -46,7 +47,7 @@ export function getUser() {
 }
 
 export function logOut() {
-    localStorage.removeResource('token');
+    localStorage.removeItem('token');
 }
 
 export function checkToken() {
