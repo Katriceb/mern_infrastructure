@@ -5,7 +5,7 @@ function  NewResourcePage() {
   const [showInput, setShowInput] = useState(false);
 
   return (
-    <li>
+    <div>
       <div className="left">
         <h2
           onClick={(e) => {
@@ -36,13 +36,13 @@ function  NewResourcePage() {
         <button
           checked={NewResource.completed}
           onClick={(e) => {
-            deleteTodo(NewResource.id)
+            deleteResource(NewResource.id)
           }}
         >
           Delete NewResource
         </button>
       </div>
-    </li>
+    </div>
   )
 }
 
